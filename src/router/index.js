@@ -4,7 +4,6 @@ import pagesJson from '../pages.json';
 
 const routes = pagesJsonToRoutes(pagesJson);
 
-/** @type {import('uni-mini-router).RouterOptions} */
 const router = createRouter({
 	routes: [...routes],
 });
