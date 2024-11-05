@@ -14,11 +14,8 @@
       <slot name="footer">
         <view class="text-#9c9d9f">
           <wd-row>
-            <wd-col :span="12">
+            <wd-col :span="24">
               <p class="text-left">{{ `阅读 ${randomReadCount}` }}</p>
-            </wd-col>
-            <wd-col :span="12">
-              <p class="text-right" @click="handleComplaint">投诉</p>
             </wd-col>
           </wd-row>
         </view>
@@ -38,14 +35,6 @@ defineProps({
 });
 
 const randomReadCount = ref('--');
-
-function handleComplaint() {
-  uni.showToast({
-    title: '投诉成功',
-    icon: 'success',
-    duration: 2000,
-  });
-}
 
 /**
  * 生成随机阅读数量

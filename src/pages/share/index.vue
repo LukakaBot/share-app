@@ -1,6 +1,6 @@
 <template>
   <view class="p-20rpx">
-    <ContentSection :content="contents[id]" />
+    <ContentSection :content="contents[category]" />
   </view>
 </template>
 
@@ -9,7 +9,7 @@ import { ref } from 'vue';
 import { onLoad } from '@dcloudio/uni-app';
 import ContentSection from './components/ContentSection.vue';
 
-const id = ref('');
+const category = ref('');
 
 const contents = [
   {
@@ -24,7 +24,7 @@ const contents = [
       'img-02.png',
       'img-03.png',
     ],
-    link: 'https://mp.weixin.qq.com/s/Jcajz28j0Gu0xqQJWp9m3w'
+    link: 'https://xs-public.eos-ningbo-1.cmecloud.cn/admin/register.html?category=1'
   },
   {
     title: '探店奇遇，从这里开始！',
@@ -38,7 +38,7 @@ const contents = [
       'img-05.png',
       'img-06.png',
     ],
-    link: 'https://mp.weixin.qq.com/s/jfiwa69yjtH2NHLDS5M0bQ'
+    link: 'https://xs-public.eos-ningbo-1.cmecloud.cn/admin/register.html?category=2'
   },
   {
     title: '5G探园，未来已来！',
@@ -52,13 +52,13 @@ const contents = [
       'img-08.png',
       'img-09.png',
     ],
-    link: 'https://mp.weixin.qq.com/s/Q-Qlj1vYbUShlJVShsWxlA',
+    link: 'https://xs-public.eos-ningbo-1.cmecloud.cn/admin/register.html?category=3',
   }
 ];
 
 onLoad((options) => {
-  if (options.id) {
-    id.value = options.id;
+  if (options.category) {
+    category.value = options.category;
   }
 });
 </script>

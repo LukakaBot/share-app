@@ -2,7 +2,7 @@
   <view class="w-100dvw h-100dvh flex justify-center items-center">
     <view>
       <wd-button class="mb-2 !font-bold" type="info" size="large" :round="false" block v-for="(btn, index) in buttons"
-        :key="index" @click="handleNavigation(btn.id)">
+        :key="index" @click="handleNavigation(btn.category)">
         {{ btn.label }}
       </wd-button>
     </view>
@@ -11,14 +11,14 @@
 
 <script setup>
 const buttons = [
-  { label: '信用卡', id: 0 },
-  { label: '电商', id: 1 },
-  { label: '5G风景', id: 2 },
+  { label: '信用卡', category: 0 },
+  { label: '电商', category: 1 },
+  { label: '5G风景', category: 2 },
 ];
 
-function handleNavigation(id) {
+function handleNavigation(category) {
   uni.navigateTo({
-    url: `/pages/share/index?id=${id}`,
+    url: `/pages/share/index?category=${category}`,
   });
 }
 </script>
