@@ -1,26 +1,30 @@
 <template>
-  <div class="card">
-    <div class="card-header">
-      {{ title }}
-    </div>
-    <div class="card-content">
-      <slot name="default">
-        <div> 暂无内容 </div>
+  <view class="card">
+    <view class="card-header">
+      <slot name="header">
+        {{ title }}
       </slot>
-    </div>
-    <div class="card-footer">
-      <div class="text-#9c9d9f">
-        <wd-row>
-          <wd-col :span="12">
-            <p class="text-left">{{ `阅读 ${randomReadCount}` }}</p>
-          </wd-col>
-          <wd-col :span="12">
-            <p class="text-right" @click="handleComplaint">投诉</p>
-          </wd-col>
-        </wd-row>
-      </div>
-    </div>
-  </div>
+    </view>
+    <view class="card-content">
+      <slot name="default">
+        <view> 暂无内容 </view>
+      </slot>
+    </view>
+    <view class="card-footer">
+      <slot name="footer">
+        <view class="text-#9c9d9f">
+          <wd-row>
+            <wd-col :span="12">
+              <p class="text-left">{{ `阅读 ${randomReadCount}` }}</p>
+            </wd-col>
+            <wd-col :span="12">
+              <p class="text-right" @click="handleComplaint">投诉</p>
+            </wd-col>
+          </wd-row>
+        </view>
+      </slot>
+    </view>
+  </view>
 </template>
 
 <script setup>
@@ -33,8 +37,6 @@ defineProps({
   },
 });
 
-
-/** @type Ref<String | Number> */
 const randomReadCount = ref('--');
 
 function handleComplaint() {
@@ -56,7 +58,7 @@ function generateRandomReadCount(min = 0, max = 1000) {
 }
 
 function init() {
-  randomReadCount.value = generateRandomReadCount(1, 100); // 生成 1 到 100 之间的随机阅读数量s
+  randomReadCount.value = generateRandomReadCount(500, 3000);
 }
 
 onMounted(() => init());

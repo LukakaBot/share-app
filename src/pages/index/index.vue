@@ -1,48 +1,26 @@
 <template>
-  <view class="content">
-    <image class="logo" src="/static/logo.png"></image>
-    <view class="text-area">
-      <text class="title">{{ title }}</text>
+  <view class="w-100dvw h-100dvh flex justify-center items-center">
+    <view>
+      <wd-button class="mb-2 !font-bold" type="info" size="large" :round="false" block v-for="(btn, index) in buttons"
+        :key="index" @click="handleNavigation(btn.id)">
+        {{ btn.label }}
+      </wd-button>
     </view>
   </view>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      title: 'Hello',
-    }
-  },
-  onLoad() {},
-  methods: {},
+<script setup>
+const buttons = [
+  { label: '信用卡', id: 0 },
+  { label: '电商', id: 1 },
+  { label: '5G风景', id: 2 },
+];
+
+function handleNavigation(id) {
+  uni.navigateTo({
+    url: `/pages/share/index?id=${id}`,
+  });
 }
 </script>
 
-<style>
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo {
-  height: 200rpx;
-  width: 200rpx;
-  margin-top: 200rpx;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50rpx;
-}
-
-.text-area {
-  display: flex;
-  justify-content: center;
-}
-
-.title {
-  font-size: 36rpx;
-  color: #8f8f94;
-}
-</style>
+<style lang="scss" scoped></style>

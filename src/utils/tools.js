@@ -6,5 +6,5 @@
 export function getImageUrl(name) {
 	const isSvg = name.endsWith('.svg');
 	const assetsDir = isSvg ? 'svg' : 'images';
-	return new URL(`./${assetsDir}/${name}`, import.meta.url).href;
+	return new URL(`/src/assets/${assetsDir}/${name}`, import.meta.url).href;
 }
