@@ -12,8 +12,8 @@
       </template>
       <template #default>
         <view class="flex flex-col gap-4">
-          <wd-img width="100%" mode="widthFix" :src="getImageUrl(name)" v-for="(name, index) in content.images"
-            :key="`image-${index}`" @click="handleNavigation(content.link)" />
+          <wd-img width="100%" mode="widthFix" :src="getImageUrl(image.name)" v-for="(image, index) in content.images"
+            :key="`image-${index}`" @click="handleNavigation(image.link)" />
         </view>
       </template>
     </Card>
@@ -32,6 +32,8 @@ defineProps({
 });
 
 function handleNavigation(link) {
+  // TODO: debug
+  console.log(link);
   window.open(link, '_self');
 }
 </script>
