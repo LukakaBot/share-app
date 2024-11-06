@@ -3,9 +3,11 @@
     <Card title="我是银行标题">
       <template #header>
         <view>
-          <h4 class="mb-3 text-xl">{{ content.title }}</h4>
-          <ul class="pl-40rpx">
-            <li class="text-base text-gray-500" v-for="(text, index) in content.texts" :key="`text-${index}`">{{ text }}
+          <h4 class="mb-3 text-2xl">{{ content.title }}</h4>
+          <p class="mb-4 text-base text-#0000004D" v-if="isRenderDate">{{ formatDate }}</p>
+          <ul class="pl-40rpx text-base text-#888">
+            <li v-for="(text, index) in content.texts" :key="`text-${index}`">
+              {{ text }}
             </li>
           </ul>
         </view>
@@ -21,19 +23,29 @@
 </template>
 
 <script setup>
+import { computed } from 'vue';
 import { getImageUrl } from '@/utils/tools';
 import Card from './Card.vue';
+import dayjs from 'dayjs';
 
-defineProps({
+const props = defineProps({
   content: {
     type: Object,
     default: () => ({})
+  },
+  date: {
+    type: String,
+    default: ''
   }
 });
 
 function handleNavigation(link) {
   window.open(link, '_self');
 }
+
+const isRenderDate = computed(() => !!props.date);
+
+const formatDate = computed(() => dayjs(props.date).format('YYYY年MM月DD日'));
 </script>
 
 <style lang="scss" scoped></style>

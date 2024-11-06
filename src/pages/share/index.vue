@@ -1,6 +1,6 @@
 <template>
   <view class="p-20rpx">
-    <ContentSection :content="contents[category]" />
+    <ContentSection :content="contents[category]" :date="date" />
   </view>
 </template>
 
@@ -12,12 +12,11 @@ import ContentSection from './components/ContentSection.vue';
 
 const category = ref('');
 
-
+const date = ref('');
 
 onLoad((options) => {
-  if (options.category) {
-    category.value = options.category;
-  }
+  category.value = options.category || category.value;
+  date.value = options.date || date.value;
 });
 </script>
 
