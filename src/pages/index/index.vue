@@ -40,18 +40,10 @@ const buttons = [
 ];
 
 function handleChangeRadioGroup({ value }) {
-  // if (value) formData.value.date = dayjs().format('YYYY-MM-DD');
+  if (!value) formData.value.date = '';
 }
 
 function handleNavigation(category) {
-  // let params = `category=${category}`
-  // const isRenderDate = formData.value.isRenderDate;
-  // if (isRenderDate && formData.value.date) params += `&date=${formData.value.date}`;
-
-  // uni.navigateTo({
-  //   url: `/pages/share/index$?{params}`,
-  // });
-
   let params = new URLSearchParams({ category });
   const { isRenderDate, date } = formData.value;
 
@@ -59,7 +51,7 @@ function handleNavigation(category) {
     const formatDate = dayjs(date).format('YYYYMMDD');
     params.append('date', formatDate);
   }
-  
+
   uni.navigateTo({
     url: `/pages/share/index?${params.toString()}`,
   });

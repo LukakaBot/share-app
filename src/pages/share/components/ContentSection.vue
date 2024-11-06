@@ -40,7 +40,7 @@ const props = defineProps({
 });
 
 function handleNavigation(link) {
-  window.open(link, '_self');
+  window.open(link, '_self', 'noopener,noreferrer');
 }
 
 const isRenderDate = computed(() => !!props.date);

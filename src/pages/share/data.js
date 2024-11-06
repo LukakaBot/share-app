@@ -9,18 +9,17 @@ export const contents = [
 		images: [
 			{
 				name: 'img-01.png',
-				link: 'https://cs.creditcard.ecitic.com/citiccard/cardshopcloud/standardcard-h5/index.html?pid=CS0098&sid=WHSQK',
+				link: `${import.meta.env.VITE_ARTICLE_REDIRECT_URL}?category=0`,
 			},
 			{
 				name: 'img-02.png',
-				link: 'https://res.cc.cmbimg.com/itafront/TrafficFront/index.html#/pageOne/xbdpphk1',
+				link: `${import.meta.env.VITE_ARTICLE_REDIRECT_URL}?category=1`,
 			},
 			{
 				name: 'img-03.png',
-				link: 'https://xyk.cebbank.com/icip/icip-applypage/info1?cardId=24640',
+				link: `${import.meta.env.VITE_ARTICLE_REDIRECT_URL}?category=2`,
 			},
 		],
-		link: 'https://xs-public.eos-ningbo-1.cmecloud.cn/admin/register.html?category=1',
 	},
 	{
 		title: '探店奇遇，从这里开始！',
@@ -32,18 +31,17 @@ export const contents = [
 		images: [
 			{
 				name: 'img-04.png',
-				link: 'https://mobile.yangkeduo.com/duo_coupon_landing.html?goods_id=655054770239&pid=15533677_194386273&goods_sign=E932Ou4AbqtJXAgxwvfeD3ETzCbXqANN_Je2XhwhJU&zs_duo_id=13550268&cpsSign=CC_241105_15533677_194386273_babdc07e76351535182ad35836f72baa&_x_ddjb_act=%7B%22st%22%3A%221%22%7D&duoduo_type=2',
+				link: `${import.meta.env.VITE_ARTICLE_REDIRECT_URL}?category=3`,
 			},
 			{
 				name: 'img-05.png',
-				link: 'https://mobile.yangkeduo.com/duo_coupon_landing.html?goods_id=558862240460&pid=15533677_194386273&goods_sign=E9r2IHSH9FhJXAgxwtLeDyT1-45gk_m1_JdJzjWUuy&cpsSign=CC_241105_15533677_194386273_b08b6bdcc7f67d7e3649f6795daea211&_x_ddjb_act=%7B%22st%22%3A%221%22%7D&duoduo_type=2',
+				link: `${import.meta.env.VITE_ARTICLE_REDIRECT_URL}?category=4`,
 			},
 			{
 				name: 'img-06.png',
-				link: 'https://mobile.yangkeduo.com/duo_coupon_landing.html?goods_id=447256464318&pid=15533677_194386273&goods_sign=E9T2ykje9SpJXAgxwtLeD5B6bmXy1Dv3_JRPVGgZAG&cpsSign=CC_241105_15533677_194386273_c15bf775add142a7a52f04c3f22c561b&_x_ddjb_act=%7B%22st%22%3A%221%22%7D&duoduo_type=2',
+				link: `${import.meta.env.VITE_ARTICLE_REDIRECT_URL}?category=5`,
 			},
 		],
-		link: 'https://xs-public.eos-ningbo-1.cmecloud.cn/admin/register.html?category=2',
 	},
 	{
 		title: '5G探园，未来已来！',
@@ -55,11 +53,16 @@ export const contents = [
 		images: [
 			{
 				name: 'img-07.png',
-				link: 'https://mp.weixin.qq.com/s/Q-Qlj1vYbUShlJVShsWxlA',
+				link: `${import.meta.env.VITE_ARTICLE_REDIRECT_URL}?category=6`,
 			},
-			{ name: 'img-08.png', link: 'https://mp.weixin.qq.com/s/iXgwIvkO07GDGVXtOcBeBA' },
-			{ name: 'img-09.png', link: 'https://mp.weixin.qq.com/s/SEW5kOhHo0lP4vfOekF5xw' },
+			{
+				name: 'img-08.png',
+				link: `${import.meta.env.VITE_ARTICLE_REDIRECT_URL}?category=7`,
+			},
+			{
+				name: 'img-09.png',
+				link: `${import.meta.env.VITE_ARTICLE_REDIRECT_URL}?category=8`,
+			},
 		],
-		link: 'https://xs-public.eos-ningbo-1.cmecloud.cn/admin/register.html?category=3',
 	},
 ];
