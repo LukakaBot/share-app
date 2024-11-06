@@ -7,8 +7,8 @@
 <script setup>
 import { ref } from 'vue';
 import { onLoad } from '@dcloudio/uni-app';
-import ContentSection from './components/ContentSection.vue';
 import { contents } from './data';
+import ContentSection from './components/ContentSection.vue';
 
 const category = ref('');
 

@@ -32,8 +32,6 @@ defineProps({
 });
 
 function handleNavigation(link) {
-  // TODO: debug
-  console.log(link);
   window.open(link, '_self');
 }
 </script>
