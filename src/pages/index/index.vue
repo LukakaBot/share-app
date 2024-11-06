@@ -10,7 +10,7 @@
               <wd-radio :value="true">是</wd-radio>
             </wd-radio-group>
           </wd-cell>
-          <wd-datetime-picker v-model="formData.date" :default-value="today" label="日期" label-width="200rpx" type="date"
+          <wd-datetime-picker v-model="formData.date" :default-value="today" label="日期" label-width="200rpx" type="date" placeholder="请选择日期"
             v-if="formData.isRenderDate" />
         </wd-cell-group>
       </wd-form>

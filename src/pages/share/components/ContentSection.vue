@@ -24,9 +24,9 @@
 
 <script setup>
 import { computed } from 'vue';
+import dayjs from 'dayjs';
 import { getImageUrl } from '@/utils/tools';
 import Card from './Card.vue';
-import dayjs from 'dayjs';
 
 const props = defineProps({
   content: {
