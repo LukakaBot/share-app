@@ -1,6 +1,6 @@
 <template>
   <view>
-    <Card title="我是银行标题">
+    <Card>
       <template #header>
         <view>
           <h4 class="mb-3 text-2xl">{{ content.title }}</h4>
