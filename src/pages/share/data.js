@@ -8,15 +8,18 @@ export const contents = [
 		],
 		images: [
 			{
-				name: 'img-01.png',
+				label: '中信银行悦卡（白金卡）',
+				names: ['img-01.png', 'img-10.gif'],
 				link: `${import.meta.env.VITE_ARTICLE_REDIRECT_URL}?category=0`,
 			},
 			{
-				name: 'img-02.png',
+				label: '银联 HelloKitty粉色涂鸦卡',
+				names: ['img-02.png', 'img-11.gif'],
 				link: `${import.meta.env.VITE_ARTICLE_REDIRECT_URL}?category=1`,
 			},
 			{
-				name: 'img-03.png',
+				label: '银联阳光车主经典白金数字卡',
+				names: ['img-03.png', 'img-12.gif'],
 				link: `${import.meta.env.VITE_ARTICLE_REDIRECT_URL}?category=2`,
 			},
 		],
@@ -30,15 +33,15 @@ export const contents = [
 		],
 		images: [
 			{
-				name: 'img-04.png',
+				names: ['img-04.png'],
 				link: `${import.meta.env.VITE_ARTICLE_REDIRECT_URL}?category=3`,
 			},
 			{
-				name: 'img-05.png',
+				names: ['img-05.png'],
 				link: `${import.meta.env.VITE_ARTICLE_REDIRECT_URL}?category=4`,
 			},
 			{
-				name: 'img-06.png',
+				names: ['img-06.png'],
 				link: `${import.meta.env.VITE_ARTICLE_REDIRECT_URL}?category=5`,
 			},
 		],
@@ -52,15 +55,15 @@ export const contents = [
 		],
 		images: [
 			{
-				name: 'img-07.png',
+				names: ['img-07.png'],
 				link: `${import.meta.env.VITE_ARTICLE_REDIRECT_URL}?category=6`,
 			},
 			{
-				name: 'img-08.png',
+				names: ['img-08.png'],
 				link: `${import.meta.env.VITE_ARTICLE_REDIRECT_URL}?category=7`,
 			},
 			{
-				name: 'img-09.png',
+				names: ['img-09.png'],
 				link: `${import.meta.env.VITE_ARTICLE_REDIRECT_URL}?category=8`,
 			},
 		],
