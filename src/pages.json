@@ -9,19 +9,19 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "index"
+				"navigationBarTitleText": "惠享优选站"
 			}
 		},
 		{
 			"path": "pages/share/index",
 			"style": {
-				"navigationBarTitleText": "share"
+				"navigationBarTitleText": "惠享优选站"
 			}
 		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "share-app",
+		"navigationBarTitleText": "惠享优选站",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8",
 		"navigationStyle": "custom"
